@@ -52,4 +52,4 @@ Python (pandas, NumPy, scikit-learn) · simulation & data generation · EDA · s
 I worked inside Amazon fulfilment centres while completing my MSc in Data Science. On the floor, I watched pod starvation events stall entire pick stations and saw how much of shift management is reactive. This project asks: what would it look like to manage that operation *proactively*, with data? It is the analysis I wished my site had.
 
 ---
-*Akshay Shelke — MSc Data Science (Merit), Coventry University · [LinkedIn] · [Email](mailto:akshayraj2895@gmail.com)*
+*Akshay Shelke — MSc Data Science (Merit), Coventry University · [Email](mailto:akshay.sv.shelke@gmail.com)*
