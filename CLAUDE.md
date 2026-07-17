@@ -4,19 +4,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project overview
 
-A small, self-contained fulfilment-centre (warehouse) operations analytics project. All data is synthetic. The project simulates hourly, per-station throughput data, then runs EDA, a bottleneck/disruption-cost analysis, and a gradient-boosting classifier to predict hours at risk of missing throughput targets. Everything lives under `fc-analytics/`.
+A small, self-contained fulfilment-centre (warehouse) operations analytics project. All data is synthetic. The project simulates hourly, per-station throughput data, then runs EDA, a bottleneck/disruption-cost analysis, and a gradient-boosting classifier to predict hours at risk of missing throughput targets.
 
 See [README.md](README.md) for the full write-up of business questions and key findings.
 
 ## Commands
 
-There is no dependency manifest (no `requirements.txt`/`pyproject.toml`) — install directly:
-
 ```bash
-pip install pandas numpy scikit-learn matplotlib seaborn streamlit
+pip install -r requirements.txt
 ```
 
-Run from inside `fc-analytics/` (paths below assume this as cwd):
+Run from the repo root:
 
 ```bash
 python src/generate_data.py   # regenerate data/fc_operations_90days.csv (seeded, reproducible via np.random.default_rng(42))

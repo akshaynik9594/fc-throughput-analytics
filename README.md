@@ -19,25 +19,33 @@ End-to-end operations analytics project: simulating, analysing and predicting th
 - **Night shift runs ~7% below day shift UPH**, and productivity dips measurably after hour 6 of any shift (fatigue effect) — break scheduling and rotation are levers.
 - **Target-misses are predictable** — a gradient boosting classifier reaches ROC AUC 0.89, against a logistic regression baseline at 0.88. The gap is small, meaning most of the signal is close to linear once station and shift are encoded; gradient boosting is kept for its built-in feature-importance ranking and for headroom on messier real-world data, not because it's dramatically more accurate here.
 
+![EDA overview — UPH vs target, fatigue curve, daily timeline, day-of-week pattern](outputs/01_eda_overview.png)
+
+![Estimated units lost to pod starvation, by station](outputs/02_starvation_cost.png)
+
+## Live dashboard
+
+**[Try the interactive dashboard →](STREAMLIT_APP_URL)**
+
+![Dashboard screenshot](dashboard_screenshot.png)
+
 ## Project structure
 
 ```
-fc-analytics/
 ├── data/
 │   └── fc_operations_90days.csv     # 10,800 rows: hourly × station × 90 days
 ├── src/
 │   ├── generate_data.py             # synthetic data generator (seeded, reproducible)
 │   ├── analysis.py                  # EDA, bottleneck & starvation analysis, ML model
 │   └── app.py                       # interactive Streamlit dashboard
-└── outputs/                         # charts + starvation cost table
-README.md
+├── outputs/                         # charts + starvation cost table
+└── README.md
 ```
 
 ## Running it
 
 ```bash
-pip install pandas numpy scikit-learn matplotlib seaborn streamlit
-cd fc-analytics
+pip install -r requirements.txt
 python src/generate_data.py
 python src/analysis.py
 streamlit run src/app.py
@@ -50,6 +58,10 @@ Python (pandas, NumPy, scikit-learn) · simulation & data generation · EDA · s
 ## Why this project
 
 I worked inside Amazon fulfilment centres while completing my MSc in Data Science. On the floor, I watched pod starvation events stall entire pick stations and saw how much of shift management is reactive. This project asks: what would it look like to manage that operation *proactively*, with data? It is the analysis I wished my site had.
+
+## License
+
+[MIT](LICENSE)
 
 ---
 *Akshay Shelke — MSc Data Science (Merit), Coventry University · [Email](mailto:akshay.sv.shelke@gmail.com)*
