@@ -25,7 +25,7 @@ End-to-end operations analytics project: simulating, analysing and predicting th
 
 ## Live dashboard
 
-**[Try the interactive dashboard →](STREAMLIT_APP_URL)**
+**[Try the interactive dashboard →](https://fc-throughput-analytics-9tqxuetqsz2kbtiscvaqj2.streamlit.app/)**
 
 ![Dashboard screenshot](dashboard_screenshot.png)
 
