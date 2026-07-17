@@ -22,20 +22,22 @@ End-to-end operations analytics project: simulating, analysing and predicting th
 ## Project structure
 
 ```
+fc-analytics/
 ├── data/
 │   └── fc_operations_90days.csv     # 10,800 rows: hourly × station × 90 days
 ├── src/
 │   ├── generate_data.py             # synthetic data generator (seeded, reproducible)
 │   ├── analysis.py                  # EDA, bottleneck & starvation analysis, ML model
 │   └── app.py                       # interactive Streamlit dashboard
-├── outputs/                         # charts + starvation cost table
-└── README.md
+└── outputs/                         # charts + starvation cost table
+README.md
 ```
 
 ## Running it
 
 ```bash
 pip install pandas numpy scikit-learn matplotlib seaborn streamlit
+cd fc-analytics
 python src/generate_data.py
 python src/analysis.py
 streamlit run src/app.py

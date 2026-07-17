@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A small, self-contained fulfilment-centre (warehouse) operations analytics project. All data is synthetic. The project simulates hourly, per-station throughput data, then runs EDA, a bottleneck/disruption-cost analysis, and a gradient-boosting classifier to predict hours at risk of missing throughput targets. Everything lives under `fc-analytics/`.
 
-See [fc-analytics/README.md](fc-analytics/README.md) for the full write-up of business questions and key findings.
+See [README.md](README.md) for the full write-up of business questions and key findings.
 
 ## Commands
 
