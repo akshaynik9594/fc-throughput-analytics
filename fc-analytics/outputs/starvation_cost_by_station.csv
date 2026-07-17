@@ -1,0 +1,5 @@
+station,starved_hours,avg_uph_normal,avg_uph_starved,est_units_lost
+Rebin,47,307.3,166.5,73776
+Pick,47,246.9,133.7,61028
+Pack-Singles,47,215.5,116.4,53000
+Pack-Multis,47,143.0,78.1,34221
